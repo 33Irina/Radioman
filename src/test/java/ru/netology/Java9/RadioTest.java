@@ -76,14 +76,14 @@ public class RadioTest {
     public void aboveIncreaseVolume() {
         Radio radio = new Radio();
 
-        while (radio.getVolume() < 10) {
+        while (radio.getVolume() < 100) {
             int expected = radio.getVolume() + 1;
             radio.increaseVolume();
             int actual = radio.getVolume();
             Assertions.assertEquals(expected, actual);
         }
 
-        int expected = 10;
+        int expected = 100;
         radio.increaseVolume();
         int actual = radio.getVolume();
         Assertions.assertEquals(expected, actual);
